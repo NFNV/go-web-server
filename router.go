@@ -20,8 +20,6 @@ func (r *Router) FindHandler(path string) (http.HandlerFunc, bool){
 	return handler, exist
 }
 
-
-
 func (r *Router) ServeHTTP(w http.ResponseWriter, request *http.Request) {
 	handler, exist := r.FindHandler(request.URL.Path)
 
